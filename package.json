@@ -2,6 +2,9 @@
   "name": "ubeus-market",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "17.x"
+  },
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
