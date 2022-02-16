@@ -3,7 +3,7 @@ const validator = require('validator');
 
 
 try {
-  mongoose.connect(process.env.MONGODB_URL,() =>
+  mongoose.connect('mongodb+srv://ubeus-market:%40%23Phone123@cluster0.xknsv.mongodb.net/ubeus-market-api?retryWrites=true&w=majority',{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },() =>
     console.log("connected"));
   //mongoose.set('useFindAndModify', false);
 } catch (e) {
