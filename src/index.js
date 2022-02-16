@@ -48,7 +48,6 @@ app.use(cors());
 app.options('*', cors());
 
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "../../../../learning/expensify")));
 
 
 app.use(express.json())
