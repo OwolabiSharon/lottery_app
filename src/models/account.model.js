@@ -52,9 +52,14 @@ const accountSchema = mongoose.Schema(
 
 
 accountSchema.statics.isEmailTaken = async function (email, excludeUserId) {
-  email.toLowerCase();
-  const account = await this.findOne({ email, _id: { $ne: excludeUserId } });
-  return !!account;
+  try {
+    email.toLowerCase();
+    const account = await this.findOne({ email, _id: { $ne: excludeUserId } });
+    return !!account;
+  } catch (e) {
+    console.log(e);
+  }
+
 };
 
 /**
