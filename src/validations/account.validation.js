@@ -19,7 +19,7 @@ const login = {
 
 const topUp = {
   body: Joi.object().keys({
-    amount: Joi.string().required(),
+    amount: Joi.number().integer().required(),
   }),
 };
 
